@@ -1,4 +1,17 @@
 <h1> <%= t ".headline" %> </h1>
 <p> <%= t ".first_paragraph" %> </p>
 <br>
-<p>  <%= link_to t(".link_to_page_B"), mockups_page_b_path %> </p>
+<p> <%= link_to t(".link_to_page_B"), mockups_page_b_path %> </p>
+<p> <%= link_to "Inglese", params.permit(:locale).merge(locale: 'en') %> </p>
+<p> <%= link_to "Italiano", params.permit(:locale).merge(locale: 'it') %> </p>
+
+
+
+
+  <%= link_to params.permit(:locale).merge(locale: 'en'), class: "list-group-item #{'active' if params[:locale] == 'en'}" do %>
+    <span class="glyphiconmy ico_language_us right-pad"></span> Inglese
+  <% end %>
+  <br>
+  <%= link_to params.permit(:locale).merge(locale: "it"), class: "list-group-item #{'active' if params[:locale] == 'it'}" do %>
+    <span class="glyphiconmy ico_language_it right-pad"></span> Italiano
+  <% end %>
