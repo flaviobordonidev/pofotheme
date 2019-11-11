@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :eg_users
+  get 'users/index'
   root 'mockups#page_a'
 
   devise_for :users, path_names: {sign_in: 'login'}, path: '', controllers: { sessions: 'users/sessions' }

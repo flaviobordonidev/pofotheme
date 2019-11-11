@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eg_user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @eg_user.email %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @eg_user.encrypted_password %>
+</p>
+
+<%= link_to 'Edit', edit_eg_user_path(@eg_user) %> |
+<%= link_to 'Back', eg_users_path %>
