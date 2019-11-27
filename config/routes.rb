@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :eg_posts
   resources :eg_users
   get 'users/index'
   root 'mockups#page_a'
