@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Eg Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eg_companies.each do |eg_company| %>
+      <tr>
+        <td><%= eg_company.name %></td>
+        <td><%= eg_company.note %></td>
+        <td><%= link_to 'Show', eg_company %></td>
+        <td><%= link_to 'Edit', edit_eg_company_path(eg_company) %></td>
+        <td><%= link_to 'Destroy', eg_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eg Company', new_eg_company_path %>
