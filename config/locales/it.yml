@@ -4,3 +4,10 @@ it:
       headline: "Questa è l'homepage"
       first_paragraph: "il testo mostrato è o passato da un 'file di traduzione' e questo significa che la nostra applicazione è pronta a supportare più lingue."
       link_to_page_B: "Andiamo alla pagina B"
+  users:
+    index:
+      html_head_title: "Tutti gli utenti"
+    edit:
+      html_head_title: "Modifica"
+    new:
+      html_head_title: "Nuovo utente"

@@ -6,11 +6,19 @@ class ApplicationController < ActionController::Base
     #users_path #goes to users/index
   end
 
+  #keep internationalization through links
+  def default_url_options
+    { locale: I18n.locale }
+  end
+
   #-----------------------------------------------------------------------------
   private
   
   #set language for internationalization
   def set_locale
-    I18n.locale = params[:locale] if params[:locale].present?
+    I18n.locale = params[:locale] || I18n.default_locale
   end
+  #def set_locale
+  #  I18n.locale = params[:locale] if params[:locale].present?
+  #end
 end
