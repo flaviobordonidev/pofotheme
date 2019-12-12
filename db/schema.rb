@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_095017) do
+ActiveRecord::Schema.define(version: 2019_12_10_120124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,29 @@ ActiveRecord::Schema.define(version: 2019_12_09_095017) do
     t.text "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "part_number"
+  end
+
+  create_table "eg_components", force: :cascade do |t|
+    t.string "name"
+    t.bigint "eg_company_id", null: false
+    t.text "description"
+    t.integer "shelf_life"
+    t.integer "service_life"
+    t.datetime "supplier_price_list_expiration_date"
+    t.decimal "supplier_price_list"
+    t.string "currency"
+    t.decimal "currency_exchange"
+    t.integer "currency_rounding"
+    t.decimal "supplier_discount"
+    t.integer "discount_rounding"
+    t.string "country_of_origin"
+    t.string "custom_tariff_number"
+    t.decimal "net_weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "part_number"
+    t.index ["eg_company_id"], name: "index_eg_components_on_eg_company_id"
   end
 
   create_table "eg_posts", force: :cascade do |t|
@@ -54,5 +77,6 @@ ActiveRecord::Schema.define(version: 2019_12_09_095017) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "eg_components", "eg_companies"
   add_foreign_key "eg_posts", "users"
 end

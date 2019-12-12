@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  company: one
+  description: MyText
+  shelf_life: 1
+  service_life: 1
+  supplier_price_list_expiration_date: 2019-12-09 16:10:46
+  supplier_price_list: 9.99
+  currency: MyString
+  currency_exchange: 9.99
+  currency_rounding: 1
+  supplier_discount: 9.99
+  discount_rounding: 1
+  country_of_origin: MyString
+  custom_tariff_number: MyString
+  net_weight: 9.99
+
+two:
+  name: MyString
+  company: two
+  description: MyText
+  shelf_life: 1
+  service_life: 1
+  supplier_price_list_expiration_date: 2019-12-09 16:10:46
+  supplier_price_list: 9.99
+  currency: MyString
+  currency_exchange: 9.99
+  currency_rounding: 1
+  supplier_discount: 9.99
+  discount_rounding: 1
+  country_of_origin: MyString
+  custom_tariff_number: MyString
+  net_weight: 9.99

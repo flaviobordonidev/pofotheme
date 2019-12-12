@@ -1,3 +1,9 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:html_head_title, @user.name) %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,3 +28,14 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<!--<p>-->
+<!--  <strong>Image:</strong>-->
+  <%# if @user.account_image.attached? %>
+    <%#= image_tag @user.account_image, style: "height: 100px; weight: 100px; border-radius: 50%" %>
+    <%#= image_tag @user.account_image.variant(resize: "100x100!"), style: "border-radius: 50%" %>
+    <%#= image_tag @user.account_image.variant(combine_options: {resize: '100>', gravity: 'Center', crop: '100x100+0+0' }), style: "border-radius: 50%" %>
+  <%# else %>
+    <!--Nessuna immagine presente-->
+  <%# end %>
+<!--</p>-->
