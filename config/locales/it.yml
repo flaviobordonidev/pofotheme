@@ -2,7 +2,9 @@ it:
   activerecord:
     attributes:
       user:
-        name: "Nome utentez" # fallback for when label is nil
+        name: "Nome utente" # fallback for when label is nil
+    models:
+      user: "utente"
   form_errors_message:
     one: "1 errore ha impedito il salvataggio"
     other: "%{count} errori hanno impedito il salvataggio"
@@ -39,11 +41,18 @@ it:
   helpers:
     label:
       user:
-        #name: "Nome utente"
+        name: "Nome utente"
+        email: "email"
+        password: "password"
+        password_confirmation: "conferma password"
     placeholder:
       user:
         name: "nome utente"
         email: "email"
         password: "password"
         password_confirmation: "conferma password"
+    submit:
+      user:
+        create: "Crea %{model}"
+        update: "Aggiorna %{model}"
 
