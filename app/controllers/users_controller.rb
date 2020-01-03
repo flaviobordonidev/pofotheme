@@ -29,7 +29,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        #format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: t(".notice") }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -51,7 +52,8 @@ class UsersController < ApplicationController
         format.html do
           # Logghiamoci di nuovo automaticamente bypassando le validazioni se ci siamo cambiati i nostri dati
           sign_in(@user, bypass: true) if @user == current_user_temp
-          redirect_to @user, notice: 'User was successfully updated.'
+          #redirect_to @user, notice: 'User was successfully updated.'
+          redirect_to @user, notice: t(".notice")
         end
         format.json { render :show, status: :ok, location: @user }
       else
