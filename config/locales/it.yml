@@ -1,4 +1,8 @@
 it:
+  activerecord:
+    attributes:
+      user:
+        name: "Nome utentez" # fallback for when label is nil
   form_errors_message:
     one: "1 errore ha impedito il salvataggio"
     other: "%{count} errori hanno impedito il salvataggio"
@@ -18,10 +22,6 @@ it:
       notice: "L'utente è stato creato con successo."
     update:
       notice: "L'utente è stato aggiornato con successo."
-  activerecord:
-    attributes:
-      user:
-        name: "Nome utentez" # fallback for when label is nil
     errors:
       models:
         user:
