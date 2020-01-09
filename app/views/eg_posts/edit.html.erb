@@ -1,3 +1,9 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:html_head_title, "#{t '.html_head_title'} #{@eg_post.headline}") %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <h1>Editing Eg Post</h1>
 
 <%= render 'form', eg_post: @eg_post %>
