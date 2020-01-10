@@ -1,3 +1,9 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:html_head_title, "#{t '.html_head_title'}") %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Eg Components</h1>
@@ -28,7 +34,7 @@
     <% @eg_components.each do |eg_component| %>
       <tr>
         <td><%= eg_component.name %></td>
-        <td><%= eg_component.company_id %></td>
+        <td><%= eg_component.eg_company_id %></td>
         <td><%= eg_component.description %></td>
         <td><%= eg_component.shelf_life %></td>
         <td><%= eg_component.service_life %></td>

@@ -61,6 +61,16 @@ it:
     new:
       html_head_title: "Nuova azienda"
 
+  eg_components:
+    index:
+      html_head_title: "Tutti i componenti"
+    show:
+      html_head_title: "Comp."
+    edit:
+      html_head_title: "Modifica"
+    new:
+      html_head_title: "Nuovo componente"
+
   eg_posts:
     index:
       html_head_title: "Tutti gli articoli"

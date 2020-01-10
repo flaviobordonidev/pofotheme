@@ -1,3 +1,9 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:html_head_title, "#{t '.html_head_title'}: #{@eg_component.name}") %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +13,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @eg_component.company_id %>
+  <%= @eg_component.eg_company_id %>
 </p>
 
 <p>
