@@ -2,8 +2,9 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def after_sign_in_path_for(resource_or_scope)
-    current_user # goes to users/1 (if current_user = 1)
+    #current_user # goes to users/1 (if current_user = 1)
     #users_path #goes to users/index
+    eg_posts_path
   end
 
   #keep internationalization through links
