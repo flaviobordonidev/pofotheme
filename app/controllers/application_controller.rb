@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   # as `authenticate_user!` (or whatever your resource is) will halt the filter chain and redirect 
   # before the location can be stored.
   #before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource_or_scope)
     #current_user # goes to users/1 (if current_user = 1)
@@ -18,6 +19,15 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
+  #-----------------------------------------------------------------------------
+  protected
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_in, keys: [:role])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:role])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:role])
+    end
+    
   #-----------------------------------------------------------------------------
   private
   
