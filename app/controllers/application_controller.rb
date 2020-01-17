@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def after_sign_in_path_for(resource_or_scope)
     #current_user # goes to users/1 (if current_user = 1)
@@ -33,26 +34,30 @@ class ApplicationController < ActionController::Base
   #-----------------------------------------------------------------------------
   private
   
-  #set language for internationalization
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-  end
-  #def set_locale
-  #  I18n.locale = params[:locale] if params[:locale].present?
-  #end
-
-  # Its important that the location is NOT stored if:
-  # - The request method is not GET (non idempotent)
-  # - The request is handled by a Devise controller such as Devise::SessionsController as that could cause an 
-  #    infinite redirect loop.
-  # - The request is an Ajax request as this can lead to very unexpected behaviour.
-  def storable_location?
-    request.get? && is_navigational_format? && !devise_controller? && !request.xhr? 
-  end
-
-  def store_user_location!
-    # :user is the scope we are authenticating
-    store_location_for(:user, request.fullpath)
-  end
+    #set language for internationalization
+    def set_locale
+      I18n.locale = params[:locale] || I18n.default_locale
+    end
+    #def set_locale
+    #  I18n.locale = params[:locale] if params[:locale].present?
+    #end
+  
+    # Its important that the location is NOT stored if:
+    # - The request method is not GET (non idempotent)
+    # - The request is handled by a Devise controller such as Devise::SessionsController as that could cause an 
+    #    infinite redirect loop.
+    # - The request is an Ajax request as this can lead to very unexpected behaviour.
+    def storable_location?
+      request.get? && is_navigational_format? && !devise_controller? && !request.xhr? 
+    end
+  
+    def store_user_location!
+      # :user is the scope we are authenticating
+      store_location_for(:user, request.fullpath)
+    end
+  
+    def user_not_authorized
+      redirect_to request.referrer || root_path, notice: "You are not authorized to perform this action."
+    end
 
 end
