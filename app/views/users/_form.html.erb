@@ -30,11 +30,13 @@
     <%= form.text_field :password_confirmation, placeholder: true %>
   </div>
 
-  <div class="field">    
-    <%= form.label :role %>
-    <%#= form.text_field :role %>
-    <%= form.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
-  </div>
+  <% if current_user.present? and current_user.admin? and @user != current_user %>
+    <div class="field">    
+      <%= form.label :role %>
+      <%= form.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
+      <%#= form.number_field :role %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
