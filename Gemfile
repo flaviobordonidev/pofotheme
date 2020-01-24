@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# API clients for AWS S3 services. Comunicazione con Amazon Web Service S3 per ActiveStorage
+gem 'aws-sdk-s3', '~> 1.60', '>= 1.60.1'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'image_processing', '~> 1.10', '>= 1.10.3'
