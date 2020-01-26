@@ -82,6 +82,6 @@ class EgPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eg_post_params
-      params.require(:eg_post).permit(:meta_title, :meta_description, :headline, :incipit, :user_id, :price, :header_image)
+      params.require(:eg_post).permit(:meta_title, :meta_description, :headline, :incipit, :user_id, :price, :header_image, :content)
     end
 end

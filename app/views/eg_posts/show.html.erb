@@ -67,5 +67,9 @@
   <p>Nessuna immagine presente</p>
 <% end %>
 
+<p>
+  <%= @eg_post.content %>
+</p>
+
 <%= link_to 'Edit', edit_eg_post_path(@eg_post) %> |
 <%= link_to 'Back', eg_posts_path %>
