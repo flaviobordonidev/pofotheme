@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   resources :eg_components
   resources :eg_companies
-  resources :eg_posts
+  resources :eg_posts do
+    member do
+      delete :delete_image_attachment
+    end
+  end
   resources :eg_users
 
   #get 'eg_posts', to:'eg_posts#index', as: :user_root #creates user_root_path (default path after sign_in)
