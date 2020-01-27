@@ -34,3 +34,33 @@
     }
   }
 }
+
+// .trix-editor{
+//   &.form-control{
+//     height: auto;
+//   }
+// }
+
+// trix-toolbar .trix-button-group button {
+//   background-color: green;
+// }
+
+
+trix-toolbar .trix-button-group--file-tools {
+ display: none;
+ //background-color: green;
+}
+
+// trix-toolbar button.trix-button--icon-attach {
+//   display: none;
+// }
+
+// trix-toolbar button.trix-button--icon-heading-1 {
+//   display: none;
+// }
+
+
+
+// trix-toolbar .trix-button-group button.trix-button--icon-attach::before {
+//   background-image: none;
+// }
