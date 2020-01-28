@@ -18,3 +18,13 @@ require("channels")
 
 require("trix")
 require("@rails/actiontext")
+
+require("bootstrap")
+
+//Stylesheets
+require("../stylesheets/application.scss")
+
+// javascript code for Bootstrap tooltip
+document.addEventListener("turbolinks:load", () => {
+  $('[data-toggle="tooltip"]').tooltip()
+})
