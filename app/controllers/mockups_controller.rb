@@ -6,7 +6,7 @@ class MockupsController < ApplicationController
   end
   
   def login
-    render layout: 'mockup_first_step'
+    render layout: 'mockup'
   end
 
 end
