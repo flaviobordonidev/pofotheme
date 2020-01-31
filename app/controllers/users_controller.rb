@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  layout 'dashboard'
 
   # GET /users
   # GET /users.json
   def index
     #@users = User.all
     #@pagy, @users = pagy(User.all)
-    @pagy, @users = pagy(User.all.order(created_at: "DESC"), items: 6)
+    @pagy, @users = pagy(User.all.order(name: "ASC"), items: 6)
     authorize @users
   end
 
