@@ -26,6 +26,20 @@
   <%= @user.remember_created_at %>
 </p>
 
+<p>
+  <strong>Biography:</strong>
+  <%= @user.biography %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <% if @user.account_image.attached? %>
+    <%= image_tag @user.account_image %>
+  <% else %>
+    Nessuna immagine presente
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
