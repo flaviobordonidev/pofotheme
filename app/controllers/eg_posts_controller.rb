@@ -1,6 +1,7 @@
 class EgPostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_eg_post, only: [:show, :edit, :update, :destroy]
+  layout 'dashboard'
 
   # GET /eg_posts
   # GET /eg_posts.json
