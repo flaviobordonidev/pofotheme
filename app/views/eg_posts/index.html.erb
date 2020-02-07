@@ -38,7 +38,8 @@
 </table>
 
 <br>
-<%= sanitize pagy_nav(@pagy) %>
+<%#= sanitize pagy_nav(@pagy) %>
+<%= sanitize pagy_bootstrap_nav(@pagy) %>
 <br>
 
 <%= link_to 'New Eg Post', new_eg_post_path %>
