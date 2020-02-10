@@ -6,10 +6,8 @@ class EgPostsController < ApplicationController
   # GET /eg_posts
   # GET /eg_posts.json
   def index
-    #@eg_posts = EgPost.all
-    #@pagy, @eg_posts = pagy(EgPost.all, items: 2)
-    #@posts = EgPost.published.order(created_at: "DESC")
-    @pagy, @eg_posts = pagy(EgPost.published.order(created_at: "DESC"), items: 2)
+    @pagy, @eg_posts = pagy(EgPost.all, items: 2)
+    #@pagy, @eg_posts = pagy(EgPost.published.order(created_at: "DESC"), items: 2)
     authorize @eg_posts
   end
 
@@ -31,6 +29,9 @@ class EgPostsController < ApplicationController
   # POST /eg_posts
   # POST /eg_posts.json
   def create
+    # params restituisce una stringa ed il check-box restituisce "1" se flaggato.
+    params[:eg_post][:published_at] = "#{DateTime.current}" if params[:eg_post][:published] == "1" and params[:eg_post][:published_at].blank?
+    params[:eg_post][:published_at] = "" if params[:eg_post][:published] == "0"
     @eg_post = EgPost.new(eg_post_params)
     authorize @eg_post
 
@@ -48,6 +49,10 @@ class EgPostsController < ApplicationController
   # PATCH/PUT /eg_posts/1
   # PATCH/PUT /eg_posts/1.json
   def update
+    #raise "published è #{params[:post][:published] == "1"} - published_at è #{params[:post][:published_at].blank?} - La data di oggi è #{DateTime.current}"
+    # params restituisce una stringa ed il check-box restituisce "1" se flaggato.
+    params[:eg_post][:published_at] = "#{DateTime.current}" if params[:eg_post][:published] == "1" and params[:eg_post][:published_at].blank?
+    params[:eg_post][:published_at] = "" if params[:eg_post][:published] == "0"
     respond_to do |format|
       if @eg_post.update(eg_post_params)
         format.html { redirect_to @eg_post, notice: 'Eg post was successfully updated.' }
@@ -84,6 +89,6 @@ class EgPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eg_post_params
-      params.require(:eg_post).permit(:meta_title, :meta_description, :headline, :incipit, :user_id, :price, :header_image, :content)
+      params.require(:eg_post).permit(:meta_title, :meta_description, :headline, :incipit, :user_id, :price, :header_image, :content, :published, :published_at)
     end
 end

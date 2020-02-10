@@ -57,7 +57,7 @@
   <br>
   <%= @eg_post.updated_at.strftime("%A %d %^B %Y at %H:%M and %S seconds") %>
   <br>
-  <%= l @eg_post.created_at, format: :long %>
+  <%= l @eg_post.updated_at, format: :long %>
 </p>
 
 <% if @eg_post.header_image.attached? %>
@@ -70,6 +70,11 @@
 
 <p>
   <%= @eg_post.content %>
+</p>
+
+<p>
+  <strong>Pubblicato:</strong>
+  <%= @eg_post.published_at_formatted %>
 </p>
 
 <%= link_to 'Edit', edit_eg_post_path(@eg_post) %> |
