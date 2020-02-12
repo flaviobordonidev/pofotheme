@@ -27,10 +27,10 @@
           <% end %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to params.permit(:locale).merge(locale: 'en'), class: "dropdown-item #{'active' if params[:locale] == 'en'}" do %>
+          <%= link_to params.permit(:locale, :page).merge(locale: 'en'), class: "dropdown-item #{'active' if params[:locale] == 'en'}" do %>
             <span class="glyphiconmy ico_language_us right-pad"></span> Inglese
           <% end %>
-          <%= link_to params.permit(:locale).merge(locale: "it"), class: "dropdown-item #{'active' if params[:locale] == 'it'}" do %>
+          <%= link_to params.permit(:locale, :page).merge(locale: "it"), class: "dropdown-item #{'active' if params[:locale] == 'it'}" do %>
             <span class="glyphiconmy ico_language_it right-pad"></span> Italiano
           <% end %>
         </div>

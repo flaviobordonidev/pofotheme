@@ -42,3 +42,6 @@ en:
       html_head_title: "Edit"
     new:
       html_head_title: "New post"
+
+  eg_posts:
+    not_published: "It is not published yet"

@@ -226,6 +226,7 @@ it:
       html_head_title: "Nuovo componente"
 
   eg_posts:
+    not_published: "non è stato ancora pubblicato"
     index:
       html_head_title: "Tutti gli articoli"
     show:
