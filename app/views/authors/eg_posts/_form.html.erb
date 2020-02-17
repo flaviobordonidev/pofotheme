@@ -1,4 +1,5 @@
-<%= form_with(model: eg_post, local: true) do |form| %>
+<%#= form_with(model: eg_post, local: true) do |form| %>
+<%= form_with(model: eg_post, local: true, url: authors_url) do |form| %>
   <% if eg_post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(eg_post.errors.count, "error") %> prohibited this eg_post from being saved:</h2>
@@ -46,7 +47,7 @@
     <%= form.label :header_image %>
     <% if eg_post.header_image.attached? %>
       <%= image_tag eg_post.header_image.variant(resize_to_fit: [100, 100]) %>
-      <%= link_to 'Remove', delete_image_attachment_eg_post_path(eg_post.header_image.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Remove', delete_image_attachment_authors_eg_post_path(eg_post.header_image.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% else %>
           <p>Nessuna immagine presente</p>
     <% end %>

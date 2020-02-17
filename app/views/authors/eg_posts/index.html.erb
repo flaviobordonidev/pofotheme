@@ -32,8 +32,8 @@
         <td><%= eg_post.user_id %></td>
         <td><%= eg_post.published_at_formatted %></td>
         <td><%= link_to 'Show', eg_post %></td>
-        <td><%#= link_to 'Edit', edit_eg_post_path(eg_post) %></td>
-        <td><%#= link_to 'Destroy', eg_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_authors_eg_post_path(eg_post) %></td>
+        <td><%#= link_to 'Destroy', authors_eg_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +44,4 @@
 <%= sanitize pagy_bootstrap_nav(@pagy) %>
 <br>
 
-<%#= link_to 'New Eg Post', new_eg_post_path %>
+<%= link_to 'New Authors Eg Post', new_authors_eg_post_path %>
