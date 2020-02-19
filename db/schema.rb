@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_07_090044) do
+ActiveRecord::Schema.define(version: 2020_02_18_173303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,11 +76,21 @@ ActiveRecord::Schema.define(version: 2020_02_07_090044) do
     t.index ["eg_company_id"], name: "index_eg_components_on_eg_company_id"
   end
 
-  create_table "eg_posts", force: :cascade do |t|
+  create_table "eg_post_translations", force: :cascade do |t|
+    t.bigint "eg_post_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "meta_title"
     t.string "meta_description"
     t.string "headline"
     t.string "incipit"
+    t.text "description"
+    t.index ["eg_post_id"], name: "index_eg_post_translations_on_eg_post_id"
+    t.index ["locale"], name: "index_eg_post_translations_on_locale"
+  end
+
+  create_table "eg_posts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

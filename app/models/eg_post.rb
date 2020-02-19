@@ -11,6 +11,9 @@ class EgPost < ApplicationRecord
   ## Action Text
   has_rich_text :content
 
+  ## globalize
+  translates :meta_title, :meta_description, :headline, :incipit, :description, :fallbacks_for_empty_translations => true
+
   # == Relationships ========================================================
 
   ## association one-to-many
