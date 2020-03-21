@@ -4,8 +4,8 @@
         <!-- title -->
         <title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
 
-    <%= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
-    <%= javascript_pack_tag 'application_mockup_pofo', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
+    <%#= javascript_pack_tag 'application_mockup_pofo', 'data-turbolinks-track': 'reload' %>
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,10 +16,10 @@
         <!-- keywords -->
         <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq">
         <!-- favicon -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="<%=image_path('pofo/favicon.png')%>">
+        <link rel="apple-touch-icon" href="<%=image_path('pofo/apple-touch-icon-57x57.png')%>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<%=image_path('pofo/apple-touch-icon-72x72.png')%>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<%=image_path('pofo/apple-touch-icon-114x114.png')%>">
 
         <!-- animation -->
         <%= stylesheet_link_tag 'pofo/css/animate', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -60,7 +60,7 @@
                 <div class="container-fluid nav-header-container">
                     <!-- start logo -->
                     <div class="col-auto pl-0">
-                        <a href="index.html" title="Pofo" class="logo"><img src="images/logo.png" data-rjs="images/logo@2x.png" class="logo-dark" alt="Pofo"><img src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="Pofo" class="logo-light default"></a>
+                        <a href="index.html" title="Pofo" class="logo"><%= image_tag "pofo/logo.png", 'data-rjs': image_path('pofo/logo@2x.png'), class: "logo-dark", alt: "Pofo" %><%= image_tag "pofo/logo-white.png", 'data-rjs': image_path('pofo/logo-white@2x.png'), alt: "Pofo", class: "logo-light default" %></a>
                     </div>
                     <!-- end logo -->
                     <div class="col accordion-menu pr-0 pr-md-3">
@@ -291,10 +291,10 @@
                                                 <!-- start sub menu item  -->
                                                 <ul>
                                                     <li>
-                                                        <a href="home-creative-studio.html" class="menu-banner-image"><img src="images/menu-banner-01.png" alt="portfolio"/></a>
+                                                        <a href="home-creative-studio.html" class="menu-banner-image"><%= image_tag "pofo/menu-banner-01.png", alt: "portfolio" %></a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-creative-business.html" class="menu-banner-image"><img src="images/menu-banner-02.png" alt="portfolio"/></a>
+                                                        <a href="home-creative-business.html" class="menu-banner-image"><%= image_tag "pofo/menu-banner-02.png", alt: "portfolio" %></a>
                                                     </li>
                                                 </ul>
                                                 <!-- end sub menu item  -->
@@ -599,7 +599,8 @@
         </header>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">
+        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('<%= image_path('pofo/hamster-shopping-1920x1133.jpg') %>');">
+        <!--<section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">-->
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row align-items-center">
@@ -622,7 +623,7 @@
                         <div class="blog-post blog-post-style2">
                             <div class="blog-post-images overflow-hidden margin-25px-bottom sm-margin-15px-bottom">
                                 <a href="blog-post-layout-01.html">
-                                    <img src="http://placehold.it/750x500" alt="">
+                                    <%= image_tag "pofo/web-fox-640x403.jpg", alt: "" %>
                                 </a>
                             </div>
                             <div class="post-details">
