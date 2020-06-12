@@ -4,8 +4,8 @@
         <!-- title -->
         <title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
 
-    <%#= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
-    <%#= javascript_pack_tag 'application_mockup_pofo', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
+    <%= javascript_pack_tag 'application_mockup_pofo', 'data-turbolinks-track': 'reload' %>
         
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,6 +29,8 @@
         <%= stylesheet_link_tag 'pofo/css/et-line-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
         <!-- font-awesome icon -->
         <%#= stylesheet_link_tag 'pofo/css/font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'pofo/css/font-awesome-free', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%#= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
         <!-- themify icon -->
         <%= stylesheet_link_tag 'pofo/css/themify-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
         <!-- swiper carousel -->
@@ -888,6 +890,9 @@
                     </div>
                 </div>
             </div>
+
+<p>PIIPO<i class="far fa-smile-beam fa-3x"></i></p>
+
         </footer>
         <!-- end footer -->
         <!-- start scroll to top -->

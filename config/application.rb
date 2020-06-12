@@ -25,6 +25,7 @@ module Pofotheme
                                  'pofo/css/caligo.css',
                                  'pofo/css/rebis.css',
                                  'pofo/css/font-awesome-via_gem.css',
+                                 'pofo/css/font-awesome-free',
                                  'pofo/css/themify-icons.css',
                                  'pofo/css/swiper.min.css',
                                  'pofo/css/justified-gallery.min.css',

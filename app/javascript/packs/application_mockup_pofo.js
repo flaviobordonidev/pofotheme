@@ -20,6 +20,9 @@ require("trix")
 require("@rails/actiontext")
 
 require("bootstrap")
+//require("@fortawesome/fontawesome-free");
+import "@fortawesome/fontawesome-free/js/all";
+
 
 //Stylesheets
 require("../stylesheets/application_mockup_pofo.scss")
