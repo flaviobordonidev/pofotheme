@@ -13,4 +13,8 @@ class MockupsController < ApplicationController
   def blog_clean_full_width
     render layout: 'yield'
   end
+
+  def blog_post_layout_05
+    render layout: 'yield'
+  end
 end

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   #get 'eg_posts', to:'eg_posts#index', as: :user_root #creates user_root_path (default path after sign_in)
   get 'mockups/blog_clean_full_width'
+  get 'mockups/blog_post_layout_05'
   get 'mockups/login'
   get 'mockups/page_a'
   get 'mockups/page_b'
