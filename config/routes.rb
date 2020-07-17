@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   get 'mockups/page_a'
   get 'mockups/page_b'
   get 'mockups/s1p0_work_in_progress'
-  get 'mockups/s1p1_company_person_index'
+  get 'mockups/s1p1_home'
+  get 'mockups/s1p2_company_person_index'
   get 'users/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

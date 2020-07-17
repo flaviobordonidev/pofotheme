@@ -27,7 +27,12 @@ class MockupsController < ApplicationController
   end
   
   # Story 1 - Page 1
-  def s1p1_company_person_index
+  def s1p1_home
+    render layout: 'mockup'
+  end
+
+  # Story 1 - Page 2
+  def s1p2_company_person_index
     render layout: 'mockup'
   end
 end
