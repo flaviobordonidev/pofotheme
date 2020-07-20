@@ -319,9 +319,9 @@
     <section class="wow fadeIn padding-one-all">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-sm-12 col-xs-12 center-col">
+          <!--<div class="col-md-10 col-sm-12 col-xs-12 center-col">-->
+          <div class="col-12">
             <ul class="blog-comment">
-
               <li>
                 <div class="display-table width-100">
                   <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
@@ -350,25 +350,22 @@
                 </div>
               </li>
             </ul>
+          </div>
 
-                        <!-- start pagination -->
-                        <div class="col-12 margin-100px-top md-margin-50px-top wow fadeInUp">
-                            <div class="pagination text-small text-uppercase text-extra-dark-gray text-center">
-                                <ul class="mx-auto">
-                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a></li>
-                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled">Pagina 1 di 1</a></li>
-                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- end pagination -->
-
-
+          <!--https://stackoverflow.com/questions/35163164/how-to-center-content-in-a-bootstrap-column/35163389#:~:text=Bootstrap%204,center%20everything%20inside%20that%20column.&text=If%20you%20have%20text%20inside,center%20to%20the%20same%20class.-->
+          <div class="col-12 d-flex justify-content-center">
             <!-- start pagination -->
-            <div class="text-center margin-60px-top md-margin-50px-top wow fadeInUp">
+            <div class="row">
+            <!--<div class="text-center margin-60px-top md-margin-50px-top wow fadeInUp">-->
+            <div class="col-auto">
               <a href="#" class="btn btn-medium btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a>
-              <span>&nbsp&nbsp&nbsp Pagina 1 di 1 &nbsp&nbsp&nbsp</span>
+            </div>
+            <div class="col-auto">
+              <span class="margin-5px-top d-table d-lg-inline-block">Pagina 1 di 1</span>
+            </div>
+            <div class="col-auto">
               <a href="#" class="btn btn-medium btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a>
+            </div>
             </div>
             <!-- end pagination -->
           </div>
