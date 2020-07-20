@@ -1,5 +1,11 @@
 @import "bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 @import "./login";
 
+// evita che in modalità smartphone il menu nasconda il contenuto
+// https://stackoverflow.com/questions/14735274/bootstrap-css-hides-portion-of-container-below-navbar-navbar-fixed-top/14735451
+body {
+    padding-top: 30px;
+  }
+  
 // highlight bootstrap grid for Debug
 //.row > div { min-height:100px; border:1px solid red;}

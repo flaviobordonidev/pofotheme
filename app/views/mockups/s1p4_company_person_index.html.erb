@@ -278,7 +278,7 @@
 
 
     <!-- start form style 01 section -->
-    <section class="wow fadeIn" id="start-your-project">
+    <section class="wow fadeIn padding-one-all" id="start-your-project">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
@@ -289,29 +289,26 @@
         </div>
         <form id="project-contact-form" action="project-contact.php" method="post">
           <div class="row">
-            <!--<div class="col-12">-->
-            <!--  <div id="success-project-contact-form" class="mx-0"></div>-->
-            <!--</div>-->
-            <div class="col-12 col-sm-2 col-lg-1">
-              <%= image_tag "elis/icons/company.png", alt: "company" %>
-              <label name="first_name" >Aziende</label>
+            <div class="col-12 col-sm-auto">
+              <a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%= image_tag "elis/icons/company.png", alt: "company" %> Azienda &nbsp&nbsp&nbsp&nbsp</a>
             </div>
-            <div class="col-12 col-sm-10 col-lg-11">
-              <input type="text" name="first_name" id="first_name" placeholder="Cerca azienda..." class="medium-input">
+            <div class="col-12 col-sm">
+              <input type="text" name="find_company" id="find_company" placeholder="Cerca azienda..." class="medium-input">
             </div>
-
-            <div class="col-12 col-sm-2 col-lg-1">
-              <%= image_tag "elis/icons/person.png", alt: "person" %>
-              <label name="last_name" >Persone</label>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-auto">
+              <%= image_tag "elis/icons/arrow_right_nested.png", alt: "arrow_right_nested", class: " margin-10px-bottom margin-5px-right" %><a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%= image_tag "elis/icons/person.png", alt: "person" %> Persona &nbsp&nbsp&nbsp&nbsp</a>
             </div>
-            <div class="col-12 col-sm-10 col-lg-11">
-              <input type="text" name="last_name" id="last_name" placeholder="Cerca persona..." class="medium-input">
+            <div class="col-12 col-sm">
+              <input type="text" name="find_person" id="find_person" placeholder="Cerca persona..." class="medium-input">
             </div>
-            
+          </div>
+          <div class="row">
             <div class="col-12 text-center">
-                <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Search</button>
+              <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Search</button>
             </div>
-        </div>
+          </div>
         </form>
       </div>
     </section>
@@ -320,7 +317,7 @@
 
 
     <!-- start comments section -->
-    <section class="wow fadeIn">
+    <section class="wow fadeIn padding-one-all">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-sm-12 col-xs-12 center-col">
@@ -408,7 +405,7 @@
 
 
     <!-- start post content section -->
-    <section class="wow fadeIn">
+    <section class="wow fadeIn padding-one-all">
       <div class="container-fluid padding-five-lr"> 
         <!-- start pagination -->
         <div class=" text-center margin-60px-top md-margin-50px-top wow fadeInUp">
@@ -430,7 +427,7 @@
 
 
     <!-- start form style 01 section -->
-    <section class="wow fadeIn" id="start-your-project2">
+    <section class="wow fadeIn padding-one-all" id="start-your-project2">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
@@ -485,18 +482,31 @@
 
 
 
+
     <!-- start footer --> 
     <footer class="footer-classic-dark bg-extra-dark-gray padding-five-bottom sm-padding-30px-bottom">
-        <div class="container">
-            <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
-                <div class="row">
-                    <!-- start copyright -->
-                    <div class="col-lg-6 col-md-6 text-small text-md-right text-center">Story 1 - Page1</div>
-                    <div class="col-lg-6 col-md-6 text-small text-md-left text-center"><a href="#">GoTo next page</a></div>
-                    <!-- end copyright -->
-                </div>
+      <div class="container">
+        <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 text-small text-center">
+              <p>Siamo nella pagina di home. Premiamo il pulsante "SELEZIONA VOCE...". Si apre un popup con l'elenco delle possibili voci. Selezioniamo "AZIENDA".</p>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 text-small text-center">
+              <%= link_to mockups_s1p2_company_index_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
+                <i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev
+              <% end %>
+              <span>&nbsp&nbsp&nbsp Story 1 - Page <strong>3</strong> &nbsp&nbsp&nbsp</span>
+              <%#= link_to "Next", mockups_s1p2_company_person_index_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" %>
+              <!--<a href="#" class="btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a>-->
+              <%= link_to mockups_s1p3_company_person_index_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
+                Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i>
+              <% end %>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- end footer -->
 

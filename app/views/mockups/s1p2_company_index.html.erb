@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <!-- title -->
-    <title>S1P1 – home</title>
+    <title>S1P1 – company person index</title>
 
     <%= stylesheet_pack_tag 'application_mockup_pofo', media: 'all', 'data-turbolinks-track': 'reload' %><!-- serve per heroku. In locale non serve perché indichiamo lo stile direttamente da "packs/application.js"-->
     <%= javascript_pack_tag 'application_mockup_pofo', 'data-turbolinks-track': 'reload' %>
@@ -289,29 +289,23 @@
         </div>
         <form id="project-contact-form" action="project-contact.php" method="post">
           <div class="row">
-            <!--<div class="col-12">-->
-            <!--  <div id="success-project-contact-form" class="mx-0"></div>-->
-            <!--</div>-->
-            <div class="col-12 col-sm-2 col-lg-2">
-              <a class="btn btn-medium btn-rounded btn-transparent-dark-gray popup-with-zoom-anim wow fadeInUp" data-wow-delay="0.6s" href="#modal-popup2"><%= image_tag "elis/icons/home.png", alt: "home" %> Seleziona voce... &nbsp&nbsp&nbsp&nbsp</a>
-              <!-- start modal pop-up -->
-              <div id="modal-popup2" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
-                <input type="text" name="first_name" id="first_name" placeholder="Cerca ..." class="medium-input">
-                <!--<a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%#= image_tag "elis/icons/company.png", alt: "company" %> Azienda &nbsp&nbsp&nbsp&nbsp</a>-->
-                <%= link_to mockups_s1p2_company_index_path, class: "btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom", 'data-wow-delay': "0.6s" do %>
-                  <%= image_tag "elis/icons/company.png", alt: "company" %> Azienda &nbsp&nbsp&nbsp&nbsp
-                <% end %>
-                <a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%= image_tag "elis/icons/person.png", alt: "person" %> Persona &nbsp&nbsp&nbsp&nbsp</a>
-                <p class="margin-four">
-                <a href="#"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a>
-                22 di 99
-                <a href="#">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a>
-                </p>
-                <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
-              </div>
-              <!-- end modal pop-up -->
+            <div class="col-12 col-sm-auto">
+              <a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%= image_tag "elis/icons/company.png", alt: "company" %> Azienda &nbsp&nbsp&nbsp&nbsp</a>
             </div>
-            <div class="col-12 col-sm-10 col-lg-10">
+            <div class="col-12 col-sm">
+              <input type="text" name="find_company" id="find_company" placeholder="Cerca azienda..." class="medium-input">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-auto">
+              <%= image_tag "elis/icons/arrow_right_nested.png", alt: "arrow_right_nested", class: " margin-10px-bottom margin-5px-right" %><a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom disabled" data-wow-delay="0.6s" href="#"> Secondo livello &nbsp&nbsp&nbsp&nbsp</a>
+            </div>
+            <div class="col-12 col-sm">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">Search</button>
             </div>
           </div>
         </form>
@@ -320,25 +314,69 @@
     <!-- end form style 01 section -->
 
 
-    <!-- start section entries more used -->
-    <section class="wow fadeIn padding-one-all" id="start-your-project">
+
+    <!-- start comments section -->
+    <section class="wow fadeIn padding-one-all">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <p>Le voci più usate:</p>
-          </div>  
-          <div class="col-12 col-sm-2 col-lg-2">
-              <%= link_to mockups_s1p2_company_index_path, class: "btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom", 'data-wow-delay': "0.6s" do %>
-                <%= image_tag "elis/icons/company.png", alt: "company" %> Azienda &nbsp&nbsp&nbsp&nbsp
-              <% end %>
-              <a class="btn btn-medium btn-rounded btn-transparent-dark-gray margin-10px-bottom" data-wow-delay="0.6s" href="#"><%= image_tag "elis/icons/person.png", alt: "person" %> Persona &nbsp&nbsp&nbsp&nbsp</a>
-          </div>
-          <div class="col-12 col-sm-10 col-lg-10">
+          <div class="col-md-10 col-sm-12 col-xs-12 center-col">
+            <ul class="blog-comment">
+
+              <li>
+                <div class="display-table width-100">
+                  <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
+                    <%= image_tag "pofo/logo_peroni.png", class: "img-circle width-85 xs-width-100", alt: "" %>
+                  </div>
+                  <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
+                      <a href="blog-post-layout-05.html#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Peroni - Stabilimento di RM - 17701 (Cliente)</a>
+                      <!--<a href="blog-post-layout-05.html#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>-->
+                      <p>Via Vattelapesca 14 - 00121 Roma Italia. Centralino: 1234567899  Email: info@peroni.it</p>
+                      <div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2020, 6:05 pm</div>
+                  </div>
+                </div>
+              </li>
+
+
+              <li>
+                <div class="display-table width-100">
+                  <div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
+                    <%= link_to mockups_s1p3_company_new_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
+                      <%= image_tag "pofo/icon_new.png", class: "img-circle width-85 xs-width-100", alt: "" %>
+                    <% end %>
+                    <!--<img src="images/avtar-04.jpg" class="img-circle width-85 xs-width-100" alt="" />-->
+                  </div>
+                  <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+                        <!-- start pagination -->
+                        <div class="col-12 margin-100px-top md-margin-50px-top wow fadeInUp">
+                            <div class="pagination text-small text-uppercase text-extra-dark-gray text-center">
+                                <ul class="mx-auto">
+                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a></li>
+                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled">Pagina 1 di 1</a></li>
+                                    <li><a href="#" class="btn btn-small btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end pagination -->
+
+
+            <!-- start pagination -->
+            <div class="text-center margin-60px-top md-margin-50px-top wow fadeInUp">
+              <a href="#" class="btn btn-medium btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a>
+              <span>&nbsp&nbsp&nbsp Pagina 1 di 1 &nbsp&nbsp&nbsp</span>
+              <a href="#" class="btn btn-medium btn-transparent-black lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a>
+            </div>
+            <!-- end pagination -->
           </div>
         </div>
       </div>
     </section>
-    <!-- end  section entries more used -->
+    <!-- end comments section -->
+
 
 
     <!-- start footer --> 
@@ -347,18 +385,19 @@
         <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
           <div class="row">
             <div class="col-lg-12 col-md-12 text-small text-center">
-              <p>Benvenuti alla prima storia. In questa storia inseriamo un nuovo contatto da un biglietto da visita.</p>
-              <p>Partiamo da una situazione ex novo con DB vuoto.</p>
-              <p>Siamo nella pagina di home. Premiamo il pulsante "SELEZIONA VOCE...". Si apre un popup con l'elenco delle possibili voci. Selezioniamo "AZIENDA".</p>
+              <p>Siamo nella pagina indice di Aziende.</p>
+              <p>Essendo il DB vuoto abbiamo il placeholder che ci dice che non ci sono aziende.</p>
+              <p>Premiamo il pulsante "*" per creare una Nuova Azienda.</p>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12 col-md-12 text-small text-center">
-              <a href="#" class="btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto disabled"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev</a>
-              <span>&nbsp&nbsp&nbsp Story 1 - Page 1 &nbsp&nbsp&nbsp</span>
-              <%#= link_to "Next", mockups_s1p2_company_index_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" %>
-              <!--<a href="#" class="btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a>-->
-              <%= link_to mockups_s1p2_company_index_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
+              <%= link_to mockups_s1p1_home_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
+                <i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> Prev
+              <% end %>
+              <span>&nbsp&nbsp&nbsp Story 1 - Page 2 &nbsp&nbsp&nbsp</span>
+              <%#= link_to "Next", mockups_s1p3_company_new_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" %>
+              <%= link_to mockups_s1p3_company_new_path, class: "btn btn-small btn-transparent-white lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto" do %>
                 Next <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i>
               <% end %>
             </div>
@@ -367,7 +406,6 @@
       </div>
     </footer>
     <!-- end footer -->
-
 
     <!-- start scroll to top -->
     <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>

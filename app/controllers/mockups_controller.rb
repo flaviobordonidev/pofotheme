@@ -32,7 +32,17 @@ class MockupsController < ApplicationController
   end
 
   # Story 1 - Page 2
-  def s1p2_company_person_index
+  def s1p2_company_index
+    render layout: 'mockup'
+  end
+
+  # Story 1 - Page 3
+  def s1p3_company_new
+    render layout: 'mockup'
+  end
+
+  # Story 1 - Page 4
+  def s1p4_company_person_index
     render layout: 'mockup'
   end
 end
