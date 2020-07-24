@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'mockups#page_a'
+  root 'mockups#bactosense_home'
 
   devise_for :users, path_names: {sign_in: 'login'}, path: '', controllers: { sessions: 'users/sessions' }
   resources :users
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   #get 'eg_posts', to:'eg_posts#index', as: :user_root #creates user_root_path (default path after sign_in)
   get 'mockups/blog_clean_full_width'
   get 'mockups/blog_post_layout_05'
+  get 'mockups/bactosense_home'
   get 'mockups/login'
   get 'mockups/page_a'
   get 'mockups/page_b'
@@ -27,7 +28,8 @@ Rails.application.routes.draw do
   get 'mockups/s1p1_home'
   get 'mockups/s1p2_company_index'
   get 'mockups/s1p3_company_new'
-  get 'mockups/s1p4_company_person_index'
+  get 'mockups/s1p4_company_index'
+  get 'mockups/s1p5_company_person_index'
   get 'users/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

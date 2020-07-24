@@ -18,6 +18,10 @@ class MockupsController < ApplicationController
     render layout: 'yield'
   end
 
+  def bactosense_home
+    render layout: 'yield'
+  end
+
 
   # Story 1: inseriamo nuovo contatto da Biglietto da Visita
 
@@ -42,7 +46,12 @@ class MockupsController < ApplicationController
   end
 
   # Story 1 - Page 4
-  def s1p4_company_person_index
+  def s1p4_company_index
+    render layout: 'mockup'
+  end
+
+  # Story 1 - Page 5
+  def s1p5_company_person_index
     render layout: 'mockup'
   end
 end
