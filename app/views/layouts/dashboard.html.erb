@@ -12,10 +12,30 @@
 
   <body>
     <%= render 'layouts/dashboard_navbar' %>
+    
+    <!-- Alert messages -->
+    <% if notice %>
+      <!--<p class="alert alert-info"><%#= notice %></p>-->
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <%= notice %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+    <% if alert %>
+      <!--<p class="alert alert-warning"><%#= alert %></p>-->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= notice %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+
+    <%= yield %>
 
     <p class="alert alert-info text-center">Ambiente Dashboard</p>
-    <% if notice %><p class="alert alert-info"><%= notice %></p><% end %>
-    <% if alert %><p class="alert alert-warning"><%= alert %></p><% end %>    
-    <%= yield %>
+
   </body>
 </html>
